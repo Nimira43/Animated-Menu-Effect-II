@@ -4,6 +4,7 @@ import './globals.css'
 // import { GiStripedSun } from 'react-icons/gi'
 import Link from 'next/link'
 import { AuthProvider } from '@/context/auth'
+import AuthButtons from '@/components/auth-buttons'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -28,18 +29,7 @@ export default function RootLayout({
             <Link href='/'>Solus</Link>
             <ul>
               <li>
-                <Link
-                  href='/login'
-                >
-                  Login
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href='/register'
-                >
-                  Register
-                </Link>
+                <AuthButtons />
               </li>
             </ul>
           </nav>
