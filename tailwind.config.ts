@@ -15,7 +15,8 @@ export default {
         'grey-light-extra': '#eee',
         'grey-light': '#ccc',
         'grey-medium': '#999',
-        'grey-dark': '333',
+        'grey-dark': '#333',
+        'gold': '#ffd700'
       },
     },
   },
