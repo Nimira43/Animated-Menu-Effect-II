@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
-import { GiStripedSun } from 'react-icons/gi'
+// import { GiStripedSun } from 'react-icons/gi'
 import Link from 'next/link'
 
 const poppins = Poppins({
