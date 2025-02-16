@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google'
 import './globals.css'
 // import { GiStripedSun } from 'react-icons/gi'
 import Link from 'next/link'
+import { AuthProvider } from '@/context/auth'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -22,26 +23,28 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={poppins.className}>
-        <nav className='bg-dark text-light p-5 h-24 flex items-center justify-between'>
-          <Link href='/'>Solus</Link>
-          <ul>
-            <li>
-              <Link
-                href='/login'
-              >
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='/register'
-              >
-                Register
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        {children}
+        <AuthProvider>
+          <nav className='bg-dark text-light p-5 h-24 flex items-center justify-between'>
+            <Link href='/'>Solus</Link>
+            <ul>
+              <li>
+                <Link
+                  href='/login'
+                >
+                  Login
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/register'
+                >
+                  Register
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   )
