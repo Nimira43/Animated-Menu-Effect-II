@@ -2,7 +2,7 @@
 
 import { useAuth } from '@/context/auth'
 import Link from 'next/link'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuTrigger } from './ui/dropdown-menu'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from './ui/dropdown-menu'
 import { Avatar, AvatarFallback } from './ui/avatar'
 import Image from 'next/image'
 
@@ -38,6 +38,21 @@ export default function AuthButtons() {
                 {auth.currentUser.email}
               </div>
             </DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem asChild>
+              <Link href='/account'>My Account</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href='/my-admin-dashboard'>Admin Dashboard</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href='/account/bookmarks'>Bookmarks</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={async() => {
+              await auth.logout()
+            }}>
+              Logout
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       )}
