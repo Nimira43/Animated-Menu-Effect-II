@@ -2,7 +2,7 @@
 
 import { useAuth } from '@/context/auth'
 import Link from 'next/link'
-import { DropdownMenu, DropdownMenuTrigger } from './ui/dropdown-menu'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuTrigger } from './ui/dropdown-menu'
 import { Avatar, AvatarFallback } from './ui/avatar'
 import Image from 'next/image'
 
@@ -29,13 +29,17 @@ export default function AuthButtons() {
               
             </Avatar>
           </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>
+              <div>{auth.currentUser.displayName}</div>
+              <div
+                className='font-normal text-xs'
+              >
+                {auth.currentUser.email}
+              </div>
+            </DropdownMenuLabel>
+          </DropdownMenuContent>
         </DropdownMenu>
-        // <>
-        //   <div>{auth.currentUser.email}</div>
-        //   <div onClick={() => {
-        //     auth.logout()
-        //   }}>Logout</div>  
-        // </>
       )}
       {!auth?.currentUser &&
         <div className='flex gap-6 items-center'>
