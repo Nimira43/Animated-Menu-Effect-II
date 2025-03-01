@@ -3,7 +3,7 @@ export default function Layout({ children }: {
 }) {
 
   return (
-    <div>
+    <div className='max-w-screen-sm mx-auto p-5'>
       {children}
     </div>
   )
