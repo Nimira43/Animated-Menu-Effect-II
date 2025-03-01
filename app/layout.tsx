@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { Mulish } from 'next/font/google'
 import './globals.css'
 import { GiCat } from 'react-icons/gi'
 import Link from 'next/link'
 import { AuthProvider } from '@/context/auth'
 import AuthButtons from '@/components/auth-buttons'
 
-const poppins = Poppins({
+const mulish = Mulish({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900']
 })
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={poppins.className}>
+      <body className={mulish.className}>
         <AuthProvider>
           <nav className='bg-primary text-light p-5 h-24 flex items-center justify-between'>
             <Link
