@@ -33,7 +33,15 @@ export default function RootLayout({
               <GiCat />
               <span>Solus</span>
             </Link>
-            <ul>
+            <ul className='flex gap-6 items-center'>
+              <li>
+                <Link
+                  href='/property-search'
+                  className='uppercase font-semibold  hover:text-dark'
+                >
+                  Property Search
+                </Link>
+              </li>
               <li>
                 <AuthButtons />
               </li>
