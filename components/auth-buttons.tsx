@@ -17,14 +17,20 @@ export default function AuthButtons() {
         </>
       )}
       {!auth?.currentUser &&
-        <>
-          <Link href='/login'>
+        <div className='flex gap-2 items-center'>
+          <Link
+            href='/login'
+            className='uppercase font-semibold hover:text-dark transition-colors duration-500'
+          >
             Login
           </Link>
-          <Link href='/register'>
+          <Link
+            href='/register'
+            className='uppercase font-semibold hover:text-dark transition-colors duration-500'
+          >
             Register
           </Link>
-        </>
+        </div>
       }
     </div>
   )

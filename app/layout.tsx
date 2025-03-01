@@ -37,7 +37,7 @@ export default function RootLayout({
               <li>
                 <Link
                   href='/property-search'
-                  className='uppercase font-semibold  hover:text-dark'
+                  className='uppercase font-semibold   hover:text-dark transition-colors duration-500'
                 >
                   Property Search
                 </Link>
