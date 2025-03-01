@@ -14,13 +14,12 @@ export default {
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
-  			dark: '#111',
-  			light: '#fffcfa',
+  			'dark': '#111',
+  			'light': '#fffcfa',
   			'grey-light-extra': '#eee',
   			'grey-light': '#ccc',
   			'grey-medium': '#999',
-  			'grey-dark': '#333',
-  			gold: '#ffd700',
+				'grey-dark': '#333',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
