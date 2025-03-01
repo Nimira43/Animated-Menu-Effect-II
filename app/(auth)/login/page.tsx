@@ -5,7 +5,7 @@ export default function Login() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Login</CardTitle>
+        <CardTitle className='text-3xl font-semibold uppercase text-primary'>Login</CardTitle>
       </CardHeader>
     <CardContent>
       <ContinueWithGoogleButton />
