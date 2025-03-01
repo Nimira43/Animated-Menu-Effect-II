@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={poppins.className}>
         <AuthProvider>
-          <nav className='bg-dark text-light p-5 h-24 flex items-center justify-between'>
+          <nav className='bg-primary text-light p-5 h-24 flex items-center justify-between'>
             <Link href='/'>Solus</Link>
             <ul>
               <li>
