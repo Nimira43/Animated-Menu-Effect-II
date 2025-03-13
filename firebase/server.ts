@@ -1,6 +1,6 @@
 import { Firestore, getFirestore } from 'firebase-admin/firestore'
 import { getApps, ServiceAccount } from 'firebase-admin/app'
-import admin, { initializeApp } from 'firebase-admin'
+import admin from 'firebase-admin'
 import { Auth, getAuth } from 'firebase-admin/auth'
 
 const serviceAccount = {
@@ -22,7 +22,7 @@ let auth: Auth
 const currentApps = getApps()
 
 if (!currentApps.length) {
-  const app = initializeApp({
+  const app = admin.initializeApp({
     credential: admin.credential.cert(serviceAccount as ServiceAccount)
   })
   firestore = getFirestore(app)  
