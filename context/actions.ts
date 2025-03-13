@@ -11,7 +11,12 @@ export const setToken = async({
   }) => {
   try {
     const verifiedToken = await auth.verifyIdToken(token)
-  } catch (error) {
-    console.log(error)
+    if (!verifiedToken) {
+      return
+    }
+    const userRecord = await auth.getUser(verifiedToken.uid)
+    if (process.env.ADMIN_EMAIL === userRecord.email && userRecord.customClaims?.admin)
+  } catch (e) {
+    console.log(e)
   }  
 }
