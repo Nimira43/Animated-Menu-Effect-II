@@ -31,6 +31,10 @@ export const setToken = async({
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
     })
+    cookieStore.set('firebaseAuthRefreshToken', refreshToken, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+    })
 
   } catch (e) {
     console.log(e)
