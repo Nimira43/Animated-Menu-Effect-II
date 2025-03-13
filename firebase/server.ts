@@ -1,7 +1,7 @@
 import { Firestore, getFirestore } from 'firebase-admin/firestore'
 import { getApps, ServiceAccount } from 'firebase-admin/app'
 import admin, { initializeApp } from 'firebase-admin'
-import { Auth, getAuth } from 'firebase/auth'
+import { Auth, getAuth } from 'firebase-admin/auth'
 
 const serviceAccount = {
   "type": "service_account",
@@ -33,4 +33,4 @@ if (!currentApps.length) {
   auth = getAuth(app)
 }
 
-export { firestore, auth }
+export { firestore, auth } 
