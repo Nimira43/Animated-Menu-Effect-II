@@ -8,12 +8,13 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next()
   }
   const cookieStore = await cookies()
-  const token = cookieStore.get('firebaseAuthToken')
-  const decodedToken = decodeJwt(token)
-
+  const token = cookieStore.get('firebaseAuthToken')?.value
+  
   if (!token) {
     return NextResponse.redirect(new URL('/', request.url))
   }
+
+  const decodedToken = decodeJwt(token)
 } 
 
 export const config = {
