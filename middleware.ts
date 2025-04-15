@@ -15,6 +15,10 @@ export async function middleware(request: NextRequest) {
   }
 
   const decodedToken = decodeJwt(token)
+
+  if (!decodedToken.admin) {
+    return NextResponse.redirect(new URL('/', request.url))
+  }
 } 
 
 export const config = {
