@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  color: #f6ffff;
+.logo {
+  font-family: 'Carattere', cursive;
 }
