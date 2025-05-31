@@ -15,5 +15,9 @@ if (!currentApps.length) {
   auth = getAuth(app)
   storage = getStorage(app)
 } else {
-  app
+  const app = currentApps[0]
+  auth = getAuth(app)
+  storage = getStorage(app)
 }
+
+export { auth, storage }
