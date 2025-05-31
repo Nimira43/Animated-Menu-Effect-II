@@ -3,7 +3,7 @@ import { Auth, getAuth } from 'firebase/auth'
 import { FirebaseStorage, getStorage } from 'firebase/storage'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCCAAJByjbCzhPBXpRv9jihN5O6LIXxI7k',
+  apiKey: process.env.FIREBASE_PUBLIC_API_KEY,
   authDomain: 'solus-36aba.firebaseapp.com',
   projectId: 'solus-36aba',
   storageBucket: 'solus-36aba.firebasestorage.app',
