@@ -25,7 +25,7 @@ export default function RootLayout({
         <nav className='bg-grey-dark  p-5 h-24 flex items-center justify-between'>
           <Link 
             href='/'
-            className='logo'  
+            className='logo text-light'  
           >
             <BiSolidCat className='text-3xl text-light'/>
             Solus
@@ -34,11 +34,13 @@ export default function RootLayout({
             <li>
               <Link
                 href='/login'
+                className='text-light'
               >Login</Link>
             </li>
             <li>
               <Link
                 href='/register'
+                className='text-light'
               >Register</Link>
             </li>
           </ul>
