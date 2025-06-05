@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
+import Link from 'next/link'
+import { BiSolidCat } from 'react-icons/bi'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -20,7 +22,27 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={poppins.className}>
-        <nav className='bg-grey-medium text-main'></nav>
+        <nav className='bg-grey-dark  p-5 h-24 flex items-center justify-between'>
+          <Link 
+            href='/'
+            className='logo'  
+          >
+            <BiSolidCat className='text-3xl text-light'/>
+            Solus
+          </Link>
+          <ul>
+            <li>
+              <Link
+                href='/login'
+              >Login</Link>
+            </li>
+            <li>
+              <Link
+                href='/register'
+              >Register</Link>
+            </li>
+          </ul>
+        </nav>
         {children}
       </body>
     </html>
