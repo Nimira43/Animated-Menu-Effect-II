@@ -42,3 +42,12 @@ video {
   justify-content: center;
 }
 
+ul {
+  position: relative;
+}
+
+ul li {
+  list-style: none;
+  text-align:center;
+}
+
