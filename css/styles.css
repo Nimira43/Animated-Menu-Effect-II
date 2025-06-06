@@ -57,6 +57,14 @@ a {
   font-size: 3em;
   padding: 5px 20px;
   display: inline-flex;
+  transition: 0.5s;
 }
 
-ul
+ul:hover a {
+  color: #ffd700;
+}
+
+ul li a:hover {
+  color: #ff4500;
+  background: #111;
+}
