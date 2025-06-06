@@ -46,17 +46,6 @@ ul {
   position: relative;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 ul li {
   list-style: none;
   text-align:center;
@@ -93,6 +82,8 @@ a:before {
   width: 100vw;
   height: 100vh;
 }
+
+
 
 a:hover:before {
   content: attr(data-text);
