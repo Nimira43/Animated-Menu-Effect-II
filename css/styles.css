@@ -82,7 +82,13 @@ a:before {
   font-size: 5em;
   z-index: -1;
   letter-spacing: 500px;
+  opacity: 0;
   width: 100vw;
   height: 100vh;
 }
 
+a:hover:before {
+  content: attr(data-text);
+  opacity: 1;
+  letter-spacing: 10px;
+}
