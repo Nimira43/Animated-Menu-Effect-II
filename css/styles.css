@@ -46,6 +46,17 @@ ul {
   position: relative;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 ul li {
   list-style: none;
   text-align:center;
@@ -60,13 +71,8 @@ a {
   transition: 0.5s;
 }
 
-ul:hover a {
-  color: #ffd700;
-}
-
 ul li a:hover {
-  color: #ff4500;
-  background: #111;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 a:before {
@@ -75,13 +81,14 @@ a:before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: red;
+  color: #ffd700;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 5em;
   z-index: -1;
   letter-spacing: 500px;
+  text-transform: uppercase;
   opacity: 0;
   width: 100vw;
   height: 100vh;
@@ -92,3 +99,21 @@ a:hover:before {
   opacity: 1;
   letter-spacing: 10px;
 }
+
+li a:before {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
